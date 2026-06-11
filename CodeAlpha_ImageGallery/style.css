@@ -1,0 +1,99 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #f4f4f4;
+  transition: 0.3s;
+}
+
+.dark {
+  background: #111;
+  color: white;
+}
+
+h1 {
+  margin: 20px;
+}
+
+/* Buttons */
+.buttons button {
+  margin: 10px;
+  padding: 8px 15px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.img-box {
+  position: relative;
+}
+
+.img-box img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.img-box img:hover {
+  transform: scale(1.08);
+}
+
+/* Like Button */
+.img-box span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+}
+
+#lightbox img {
+  max-width: 80%;
+  margin-top: 5%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prev { left: 10%; }
+.next { right: 10%; }
+
+.controls {
+  margin-top: 20px;
+}
